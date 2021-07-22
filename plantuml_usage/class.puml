@@ -1,0 +1,23 @@
+@startuml
+class 水
+class 空气
+class 动物<<abstract>>
+class 飞翔<<interface>>
+class 鸟
+class 翅膀
+class 大雁
+class 大雁群
+class 企鹅
+class 气候
+
+动物 .l.> 水 : 依赖
+动物 .r.> 空气 : 依赖
+动物 <|--  鸟 : 继承
+鸟 .r.|> 飞翔 : 实现
+鸟 <|-- 大雁 : 继承
+鸟 <|-- 企鹅 : 继承
+鸟 *-l- "2" 翅膀 : 组合
+大雁群 o-r- "1..*" 大雁 : 聚合
+企鹅 -r-> 气候 : 关联
+footer %filename() rendered with PlantUML version %version()\nleo.qin
+@enduml

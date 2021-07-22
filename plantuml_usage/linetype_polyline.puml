@@ -1,0 +1,13 @@
+@startuml
+rectangle Arrows
+rectangle A
+rectangle B
+rectangle C
+rectangle D
+
+Arrows --> A 
+A --> B
+A --> C
+B --> D
+A --> D
+@enduml

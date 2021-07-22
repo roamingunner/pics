@@ -1,0 +1,27 @@
+@startuml
+clock clk with period 1
+binary "Enable" as EN
+robust "status" as status
+concise "dataBus" as DB
+
+'@表示时间
+@0
+EN is low
+DB is "0x0000"
+status is s1
+@5
+EN is high
+DB is "0xFAC7"
+status is s2
+@6
+EN is high
+DB is "xxxx"
+status is s3
+
+'@+表示相对时间
+@+4
+EN is low
+DB is "0x0000"
+status is s1
+
+@enduml

@@ -1,0 +1,4 @@
+@startuml
+storage s1#LightBlue
+storage s2#ff22ff
+@enduml
